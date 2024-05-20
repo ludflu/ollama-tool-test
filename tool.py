@@ -14,10 +14,10 @@ def get_weather(location: str) -> str:
 
 def list_family_members(last_name: str) -> list[dict]:
     """Useful for listing the family members of a given name."""
-    return [{"name":"Jim", "relation":"Father"},
-            {"name":"Jaime", "relation":"Mother"},
-            {"name":"Maggie", "relation":"Son"},
-            {"name":"Graham", "relation":"Son"}]
+    return [{"name":"Dave", "relation":"Father"},
+            {"name":"Martha", "relation":"Mother"},
+            {"name":"Susan", "relation":"Daughter"},
+            {"name":"Billy", "relation":"Son"}]
 
 weather = FunctionTool.from_defaults(get_weather,
                                   name="get_weather",
@@ -35,5 +35,5 @@ tools = [weather, mult, fam]
 
 agent = ReActAgent.from_tools(tools, llm=llm, verbose=True)
 
-agent.chat("what is the name of Maggie's father?")
+agent.chat("what is the name of Susan's father?")
 
