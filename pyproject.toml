@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ollama-tools"
+version = "0.1.0"
+description = ""
+authors = ["Jim Snavely <ludflu@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "^0.1.17"
+notebook = "^7.1.3"
+langchain-experimental = "^0.0.57"
+langchain-community = "^0.0.36"
+llama-index = "^0.10.34"
+llama-index-llms-ollama = "^0.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
